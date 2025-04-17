@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pt-br">
+<html lang="pt-br" data-bs-theme="light" id="html">
 
     <head>
 
@@ -18,16 +18,29 @@
         <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
         <link rel="shortcut icon" href="Favicon/favicon.ico">
 
+        <style>
+
+            .navbarcolor{
+                background-color: rgb(40, 40, 40);
+            }
+
+        </style>
+
     </head>
 
     <body>
 
         <!-- navbar -->
-        <nav class="navbar navbar navbar-dark bg-dark">
+        <nav class="navbar navbarcolor navbar-dark" color>
 
             <div class="container">
 
                 <div class="navbar-brand">Rafael Lombardi</div>
+
+                <div class="form-check form-switch">
+                    <input type="checkbox" id="escuro" name="escuro" class="form-check-input" onclick="modo_escuro();"/>
+                    
+                </div>
 
                 <button class="navbar-toggler" data-bs-toggle="collapse"data-bs-target=#nav aria-controls="nav" aria-label="Expand Navigation">
                     <div class="navbar-toggler-icon"></div>
@@ -51,7 +64,6 @@
             
             </div>
         </nav>
-            <!-- Quero ter um switch de modo escuro -->
 
         <div class="container " style="margin-top:2em;">
 
@@ -63,7 +75,20 @@
             </div>
 
         </div>
+        
+        <script>
 
+            function modo_escuro(){
+                const html = document.getElementById("html")
+                var checkbox = document.getElementById("escuro");
+                checkbox.addEventListener("change",() => {
+                    if (checkbox.checked) {html.setAttribute("data-bs-theme", "dark");}
+                    else {html.setAttribute("data-bs-theme", "light");}
+                })
+            }
+
+        </script>
+        
     </body>
 
 </html>
