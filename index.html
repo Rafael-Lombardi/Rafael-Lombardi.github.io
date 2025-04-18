@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pt-br" data-bs-theme="light" id="html">
+<html lang="pt-br" data-bs-theme="light">
 
     <head>
 
@@ -26,6 +26,27 @@
 
         </style>
 
+        <script>
+
+            function tema_select(){
+                let tema = localStorage.getItem('tema');
+
+                if (tema === 'dark'){
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                    document.getElementById("checkbox").checked = true;
+
+                }
+
+                else{
+                    document.documentElement.setAttribute('data-bs-theme', 'light');
+                    document.getElementById("checkbox").checked = false;
+                
+                }
+
+            }
+
+        </script>
+
     </head>
 
     <body>
@@ -38,7 +59,12 @@
                 <div class="navbar-brand">Rafael Lombardi</div>
 
                 <div class="form-check form-switch">
-                    <input type="checkbox" id="escuro" name="escuro" class="form-check-input" onclick="modo_escuro();"/>
+
+                    <input type="checkbox" id="checkbox" class="form-check-input" onclick="modo_escuro();"/>
+
+                    <script>
+                        tema_select();
+                    </script>
                     
                 </div>
 
@@ -79,12 +105,17 @@
         <script>
 
             function modo_escuro(){
-                const html = document.getElementById("html")
-                var checkbox = document.getElementById("escuro");
-                checkbox.addEventListener("change",() => {
-                    if (checkbox.checked) {html.setAttribute("data-bs-theme", "dark");}
-                    else {html.setAttribute("data-bs-theme", "light");}
-                })
+
+                if (document.documentElement.getAttribute('data-bs-theme') != 'dark') {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                    localStorage.setItem('tema', 'dark');
+                }
+
+                else {
+                    document.documentElement.setAttribute('data-bs-theme', 'light');
+                    localStorage.setItem('tema', 'light');
+                }
+
             }
 
         </script>
