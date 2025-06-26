@@ -19,26 +19,10 @@
         <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
         <link rel="shortcut icon" href="Favicon/favicon.ico">
 
-        <style>
+        <!-- HTMX -->
+        <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.5/dist/htmx.min.js" integrity="sha384-t4DxZSyQK+0Uv4jzy5B0QyHyWQD2GFURUmxKMBVww9+e2EJ0ei/vCvv7+79z0fkr" crossorigin="anonymous"></script>
 
-            .navbarcolor{
-                background-color: rgb(40, 40, 40);
-            }
-
-
-            @media(max-width: 576px){
-
-                .icons{
-                flex-direction: row;
-                justify-content:center;
-                }
-
-                .icons .nav-link{
-                    margin-left: 1em;
-                }
-            }
-
-        </style>
+        <link rel="stylesheet" href="styles.css">
 
         <script>
 
@@ -98,7 +82,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="Pages/projetos.html" class="nav-link">Projetos</a>
+                            <a href="" class="nav-link disabled">Projetos</a>
                         </li>
 
                     </ul>
@@ -121,16 +105,136 @@
 
         </nav>
 
-        <div class="container " style="margin-top:5em;">
+        <div class="container" style="margin-top:5em; width: 70%">
 
             <div class="row">
 
                 <h1>Sobre mim</h1>
-                <span>Não sei o que escrever aqui ainda...</span>
+
+                <span style="padding-top: 1em;">Eu sou Rafael dos Santos Lombardi, estudante do curso de Bacharelado em Ciência da Computação no 
+                    <a href="https://www.ime.usp.br/" target="_blank">Instituto de Matemática e Estatística</a> (IME) da USP. 
+                    Ingressante em 2024, atualmente estou no 3° semestre do curso, momento em que finalizo uma grade apenas com 
+                    matérias obrigatórias e passo à cursar matérias mais especializadas de minha escolha.
+                </span>
+                
+                <span style="padding-top: 1em;">
+                    Sou membro ativo no grupo de extenção <a href="https://codelab.ime.usp.br/#/" target="_blank">CodeLab</a> e, 
+                    no primeiro semestre de 2025, auxiliei na organização de um Hackathon para iniciantes da computação, 
+                    no planejamento de um curso de desenvolvimento web e na organização de seções para simulação de 
+                    entrevistas técnicas da área de computação.
+                </span>
+                
+                <span style="padding-top: 1em; padding-bottom: 2em;">
+                    Possuo grande interesse e tenho experiência com edição audovisual (imagens, audio e vídeos). Meu trabalho 
+                    anterior pode ser encontrado nos projetos do CodeLab ou no 
+                    <a href="https://www.youtube.com/@RLOMBARDI" target="_blank">meu antigo canal do Youtube</a>.
+                </span>
+
+            </div>
+
+            <hr>
+
+            <div class="row">
+
+                <h1>Caminhos no Curso</h1>
+
+                <span style="padding-top: 1em; padding-bottom: 1em;">
+                    Durante meu terceiro semestre no BCC, tivemos uma hora por semana reservada a palestras de professores 
+                    sobre as trilhas. Trilhas são conjuntos de matérias que podemos cursar ao longo da graduação que, quando juntas, 
+                    cobrem um tema amplo. A seguir comentarei sobre as trilhas que cursarei juntamente com algumas de suas matérias.
+                </span>
+                
+                <ul>
+
+                    <li style="padding-top: 1em;">
+                        <h2>Sistemas de Software</h2>
+
+                        <span>
+                            Essa trilha será meu foco principal. Durante as palestras, me interessei muito pela área e pelo 
+                            desenvolvimento de software. Tenho pouca experiência na área e gostaria de aprender mais!
+                        </span>
+                        <br><br>
+                        <span>Dentre as matérias dessa trilha, pretendo cursar:</span>
+
+                        <ul>
+
+                            <li>MAC0413 - Tópicos avaçados de Programação Orientada a Objetos</li>
+                            <li>MAC0352 - Redes de computadores e Sistemas distribuídos</li>
+                            <li>MAC0332 - Engenharia de Software</li>
+
+                        </ul>
+
+                    </li>
+
+                    <li style="padding-top: 2em;">
+
+                        <h2>Inteligência Artificial</h2>
+
+                        <span>
+                            A trilha de IA era a que mais me interessava antes de ter as palestras. Contudo, ela ainda permanece como 
+                            uma de minhas prioridades. Dado o grande destaque que a inteligência artificial possuí hoje (aposto que 
+                            sera ainda maior no futuro) e meu interesse pela área, a trilha de IA será a minha outra prioridade quanto 
+                            ao plano geral para minha trajetória no curso.
+                        </span>
+                        <br><br>
+                        <span>Algumas matérias que pretendo cursar da trilha são:</span>
+
+                        <ul>
+
+                            <li>MAC0425 - Inteligência Artiicial (obrigatória)</li>
+                            <li>MAC0444 - Sistemas Baseados em Conhecimento</li>
+                            <li>MAC0414 - Autômatos, Computabilidade e Complexidade</li>
+                            <li>MAC0460 - Introdução ao aprendizado de máquina</li>
+
+                        </ul>
+
+                    </li>
+
+                    <li style="padding-top: 2em;">
+
+                        <h2>Teoria da Computação</h2>
+
+                        <span>
+                            A trilha de teoria não será um grande foco, possivelmente nem a completarei. Mesmo assim, existem 
+                            matérias dessa trilha que me interessam e cursarei elas de forma avulsa (não seguindo a trilha).
+                        </span>
+                        <br><br>
+                        <span>Algumas dessas matérias avulsas são:</span>
+
+                        <ul>
+
+                            <li>MAC0328 - Algoritmos em Grafos</li>
+                            <li>MAC0385 - Estruturas de Dados Avançadas</li>
+                            <li>MAC036 - Criptografia para Segurança de Dados</li>
+
+                        </ul>
+
+                    </li>
+
+                    <li style="padding-top: 2em;">
+
+                        <h2>Banco de Dados</h2>
+
+                        <span>
+                            Infelizmente, aguma trilha teria que sobrar, e essa será a de Banco de Dados. Particularmente, não 
+                            tenho muito interesse na área e não irei atrás de cursar essa trilha.
+                        </span>
+
+                    </li>
+
+                </ul>
 
             </div>
 
         </div>
+
+        <footer>
+            <p class="text-center">
+                &copy 2025 Rafael dos Santos Lombardi
+                <br>
+                Último update: 26/06/2025
+            </p>
+        </footer>
         
         <script>
 

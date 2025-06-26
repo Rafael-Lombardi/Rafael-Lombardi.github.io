@@ -1,0 +1,35 @@
+span{
+    margin-top: 2em;
+}
+
+a{
+    color: rgb(107, 107, 107);
+}
+
+footer{
+    background-color: rgb(40, 40, 40);
+    color: white;
+    box-shadow: 0 50vh 0 50vh rgb(40, 40, 40)
+}
+
+.row{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.navbarcolor{
+    background-color: rgb(40, 40, 40);
+}
+
+@media(max-width: 576px){
+
+    .icons{
+        flex-direction: row;
+        justify-content:center;
+        }
+
+    .icons .nav-link{
+        margin-left: 1em;
+    }
+    
+}
