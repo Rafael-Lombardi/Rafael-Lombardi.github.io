@@ -12,6 +12,10 @@ footer{
     box-shadow: 0 50vh 0 50vh rgb(40, 40, 40)
 }
 
+.noScroll::-webkit-scrollbar {
+  display: none;
+}
+
 .row{
     margin-top: 1em;
     margin-bottom: 1em;
